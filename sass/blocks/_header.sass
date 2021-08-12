@@ -1,0 +1,103 @@
+.header
+    &-slider
+        &__wrapper
+            max-width: 1600px
+            display: flex
+            position: relative
+        &__item
+            position: relative
+            max-height: 758px
+        &__image
+            width: 100%
+        &__logo
+            position: absolute
+            top: 88px
+            left: 36%
+            right: 25%
+        &__description
+            position: absolute
+            margin-bottom: 0
+            bottom: 22%
+            left: 25%
+            right: 25%
+            font-size: 30px
+            color: $primary
+            line-height: 1.133
+            text-align: center
+            text-transform: uppercase
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75)
+    &-logo
+        width: 202px
+        height: 91px
+    &__button
+        position: absolute
+        margin-top: -60px
+        left: 50%
+        right: 0
+        border: none
+        background: none
+        &-img
+            width: 30px
+            height: 20px
+    &-navbar
+        display: flex
+        justify-content: space-between
+        padding: 20px 40px 10px 60px
+        background-color: #000
+        max-width: 1600px
+.navbar-menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__item
+        padding: 0 33px 0 0
+    &__link
+        color: $primary
+        position: relative
+        font-family: $font-raleway
+        font-size: 16px
+        line-height: 2
+        &:after
+            display: block
+            position: absolute
+            top: 30px
+            right: 0
+            width: 0
+            height: 4px
+            background-color: #f41353
+            content: ""
+            transition: width 0.3s ease-out
+.navbar-collapse
+    flex-grow: 0
+.navbar-toggler
+    background-color: $primary
+// Slider settings
+.slick
+    &-list
+        overflow: hidden
+    &-track
+        display: flex
+    &-arrow
+        position: absolute
+        top: 10%
+        font-size: 0
+        width: 20px
+        height: 30px
+        z-index: 10
+    &-prev
+        right: 6%
+        background: url(../img/arrow-left.png)
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: cover
+        border: none
+    &-next
+        right: 3%
+        background: url(../img/arrow-right.png)
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: cover
+        border: none
+#main-logo
+    width: 470px
+    height: 215px

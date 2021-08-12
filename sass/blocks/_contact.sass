@@ -1,0 +1,57 @@
+.contact
+    // background: url(../img/contact-bg.png)
+    // background-repeat: no-repeat
+    // background-position: center 0
+    max-height: 380px
+    padding: 125px 0 72px 60px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    max-width: 1600px
+    &__title
+        font-size: 54px
+        font-family: $font-lato
+        font-weight: 300
+        color: $primary
+        text-transform: uppercase
+        line-height: 1.2
+        text-align: center
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.75)
+    &__subtitle
+        font-size: 43px
+        font-family: $font-lato
+        font-weight: 300
+        color: $primary
+        text-transform: uppercase
+        line-height: 1.574
+        text-align: center
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.75)
+    &__link
+        font-family: $font-lato
+        color: $primary
+        font-weight: bold
+        line-height: 0.8
+        text-align: center
+        margin-top: 30px
+        padding: 16px 32px 16px 39px
+        background-color: $secondary
+        position: relative
+        z-index: 1
+        &:hover
+            color: $primary
+        &::after
+            content: ''
+            width: 0
+            height: 0
+            display: block
+            position: absolute
+            z-index: 1
+            border: 0
+            border-top: 22px solid transparent
+            border-bottom: 22px solid transparent
+            margin-top: -22px
+            top: 50%
+            border-left: 22px solid $secondary
+            left: auto
+            right: -22px
