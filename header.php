@@ -37,6 +37,7 @@
             </a>
         </div>
         <!-- /.header__slider -->
+
         <nav class="header-navbar navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a href="index.php" class="header-logo"><img src="<?php the_field('small_logo_header'); ?>" alt="Logo: Inspiratie by Stephanie"></a>
@@ -54,5 +55,6 @@
                 </div>
             </div>
         </nav>
+
     </header>
     <!-- /.header -->

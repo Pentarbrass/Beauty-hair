@@ -1,7 +1,6 @@
 .header
     &-slider
         &__wrapper
-            max-width: 1600px
             display: flex
             position: relative
         &__item
@@ -40,11 +39,12 @@
             width: 30px
             height: 20px
     &-navbar
-        display: flex
-        justify-content: space-between
         padding: 20px 40px 10px 60px
         background-color: #000
-        max-width: 1600px
+.container-fluid
+    display: flex
+    justify-content: space-between
+    align-items: center
 .navbar-menu
     display: flex
     justify-content: space-between
@@ -85,7 +85,7 @@
         height: 30px
         z-index: 10
     &-prev
-        right: 6%
+        right: 5%
         background: url(../img/arrow-left.png)
         background-repeat: no-repeat
         background-position: 0 0

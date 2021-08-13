@@ -21,7 +21,7 @@
 </section>
 <!-- /.description -->
 
-<section class="contact" style="background: url(<?php the_field('contact_background'); ?>) center no-repeat;">
+<section class="contact" style="background-image: url(<?php the_field('contact_background'); ?>);">
     <span class="contact__subtitle"><?php the_field('contact__subtitle'); ?></span>
     <h2 class="contact__title"><?php the_field('contact__title'); ?></h2>
     <a href="#contact" class="contact__link"><?php the_field('contact_link_label'); ?></a>
@@ -132,7 +132,7 @@
         <div class="connection__wrapper">
             <div class="form-wrapper">
                 <!-- /.form__wrapper -->
-                <?php echo do_shortcode('[contact-form-7 id="180" html_class="connection__form" title="Contact form STEPHANIE"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="191" html_class="connection__form" title="Contact form STEPHANIE"]'); ?>
 
                 <a href="tel:<?php the_field('phone-number'); ?>" class="connection__phone">
                     <img src="<?php bloginfo('template_url'); ?>/img/phone.svg" alt="Icon: Phone" class="phone">
