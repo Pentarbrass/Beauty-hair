@@ -1,49 +1,83 @@
 <?php get_header(); ?>
 
-<section class="description" style="background: url(<?php the_field('section_background'); ?>) no-repeat; background-size: cover">
+<section class="description" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat; background-size: cover">
     <div class=" container">
-        <h1 id="scrollTo" class="section-title"><?php the_field('main-title'); ?></h1>
-        <p class="section-subtitle"><?php the_field('main-subtitle'); ?></p>
+        <?php if (get_field('main-title')) : ?>
+            <h1 id="scrollTo" class="section-title"><?php the_field('main-title'); ?></h1>
+        <?php endif; ?>
+        <?php if (get_field('main-subtitle')) : ?>
+            <p class="section-subtitle"><?php the_field('main-subtitle'); ?></p>
+        <?php endif; ?>
         <div class="description__content">
             <p class="description__text">
-                <img src="<?php the_field('main_avatar'); ?>" alt="Stephanie" class="description__author">
-                <span class="description__text">
-                    <?php the_field('about'); ?>
-                </span>
+                <?php if (get_field('main_avatar')) : ?>
+                    <img src="<?php the_field('main_avatar'); ?>" alt="Stephanie" class="description__author">
+                <?php endif; ?>
+                <?php if (get_field('about')) : ?>
+                    <span class="description__text">
+                        <?php the_field('about'); ?>
+                    </span>
+                <?php endif; ?>
             </p>
         </div>
         <!-- /.description__content -->
-        <div class="description__sign">
-            <?php the_field('description__sign'); ?>
-        </div>
+        <?php if (get_field('description__sign')) : ?>
+            <div class="description__sign">
+                <?php the_field('description__sign'); ?>
+            </div>
+        <?php endif; ?>
     </div>
     <!-- /.container -->
 </section>
 <!-- /.description -->
 
-<section class="contact" style="background-image: url(<?php the_field('contact_background'); ?>);">
-    <span class="contact__subtitle"><?php the_field('contact__subtitle'); ?></span>
-    <h2 class="contact__title"><?php the_field('contact__title'); ?></h2>
-    <a href="#contact" class="contact__link"><?php the_field('contact_link_label'); ?></a>
+<section class="contact" style="background-image: url(<?php if (get_field('contact_background')) : ?><?php the_field('contact_background'); ?><?php endif; ?>);">
+    <?php if (get_field('contact__subtitle')) : ?>
+        <span class="contact__subtitle"><?php the_field('contact__subtitle'); ?></span>
+    <?php endif; ?>
+    <?php if (get_field('contact__title')) : ?>
+        <h2 class="contact__title"><?php the_field('contact__title'); ?></h2>
+    <?php endif; ?>
+    <?php if (get_field('contact_link_label')) : ?>
+        <a href="#contact" class="contact__link"><?php the_field('contact_link_label'); ?></a>
+    <?php endif; ?>
 </section>
 <!-- /.contact -->
 
-<section class="pricelist" style="background: url(<?php the_field('section_background-2'); ?>) no-repeat; background-size: cover">
+<section class="pricelist" style="background: url(<?php if (get_field('section_background-2')) : ?><?php the_field('section_background-2'); ?><?php endif; ?>) no-repeat; background-size: cover">
     <div class="container">
-        <h2 id="pricelist" class="section-title pricelist__title"><?php the_field('pricelist__title'); ?></h2>
-        <p class="section-subtitle pricelist__subtitle"><?php the_field('pricelist__subtitle'); ?></p>
-        <p class="pricelist__description"><?php the_field('pricelist__description'); ?></p>
-        <h3 class="pricelist__table--title"><?php the_field('pricelist__table-title'); ?></h3>
+        <?php if (get_field('pricelist__title')) : ?>
+            <h2 id="pricelist" class="section-title pricelist__title"><?php the_field('pricelist__title'); ?></h2>
+        <?php endif; ?>
+        <?php if (get_field('pricelist__subtitle')) : ?>
+            <p class="section-subtitle pricelist__subtitle"><?php the_field('pricelist__subtitle'); ?></p>
+        <?php endif; ?>
+        <?php if (get_field('pricelist__description')) : ?>
+            <p class="pricelist__description"><?php the_field('pricelist__description'); ?></p>
+        <?php endif; ?>
+        <?php if (get_field('pricelist__table-title')) : ?>
+            <h3 class="pricelist__table--title"><?php the_field('pricelist__table-title'); ?></h3>
+        <?php endif; ?>
         <div class="table-responsive-xl">
             <table class="pricelist__table">
                 <thead>
                     <tr>
                         <th scope="col" class="hair-length__item--empty"></th>
-                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-2-title'); ?></span></th>
-                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-3-title'); ?></span></th>
-                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-4-title'); ?></span></th>
-                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-5-title'); ?></span></th>
-                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-6-title'); ?></span></th>
+                        <?php if (get_field('column-2-title')) : ?>
+                            <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-2-title'); ?></span></th>
+                        <?php endif; ?>
+                        <?php if (get_field('column-3-title')) : ?>
+                            <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-3-title'); ?></span></th>
+                        <?php endif; ?>
+                        <?php if (get_field('column-4-title')) : ?>
+                            <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-4-title'); ?></span></th>
+                        <?php endif; ?>
+                        <?php if (get_field('column-5-title')) : ?>
+                            <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-5-title'); ?></span></th>
+                        <?php endif; ?>
+                        <?php if (get_field('column-6-title')) : ?>
+                            <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-6-title'); ?></span></th>
+                        <?php endif; ?>
                     </tr>
                 </thead>
                 <tbody>

@@ -12,13 +12,13 @@ function beauty_style()
 function beauty_scripts()
 {
     wp_deregister_script('jquery');
-    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-3.6.0.min.js');
+    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-3.6.0.min.js', array(), null, false);
     wp_enqueue_script('jquery');
 
-    wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '5.0', true);
+    wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '5.0', false);
     wp_enqueue_script('fancybox-script', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js', array('jquery'), null, true);
-    wp_enqueue_script('slick-script', get_template_directory_uri() . '/js/slick.js', array('jquery'), null, true);
-    wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true);
+    wp_enqueue_script('slick-script', get_template_directory_uri() . '/js/slick.js', array('jquery'), null, false);
+    wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), null, false);
 }
 
 function load_fonts()

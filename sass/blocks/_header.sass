@@ -49,6 +49,24 @@
     display: flex
     justify-content: space-between
     align-items: center
+    li
+        padding: 0 33px 0 0
+        a
+            color: $primary
+            position: relative
+            font-family: $font-raleway
+            font-size: 16px
+            line-height: 2
+            &:after
+                display: block
+                position: absolute
+                top: 30px
+                right: 0
+                width: 0
+                height: 4px
+                background-color: #f41353
+                content: ""
+                transition: width 0.3s ease-out
     &__item
         padding: 0 33px 0 0
     &__link

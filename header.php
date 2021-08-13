@@ -14,20 +14,35 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="hero">
         <div class="header-slider">
             <div class="header-slider__wrapper">
                 <div class="header-slider__item">
-                    <img src="<?php the_field('header-slider__image'); ?>" alt="slide" class="header-slider__image">
-                    <a href="index.php" id="main-logo"><img src="<?php the_field('main-logo'); ?>" alt="Logo: Inspiratie by Stephanie" class="header-slider__logo"></a>
-                    <p class="header-slider__description"><?php the_field('header-slider__description'); ?>
-                    </p>
+                    <?php if (get_field('header-slider__image')) : ?>
+                        <img src="<?php the_field('header-slider__image'); ?>" alt="slide" class="header-slider__image">
+                    <?php endif; ?>
+                    <?php if (get_field('main-logo')) : ?>
+                        <a href="index.php" id="main-logo">
+                            <img src="<?php the_field('main-logo'); ?>" alt="Logo: Inspiratie by Stephanie" class="header-slider__logo">
+                        </a>
+                    <?php endif; ?>
+                    <?php if (get_field('header-slider__description')) : ?>
+                        <p class="header-slider__description">
+                            <?php the_field('header-slider__description'); ?>
+                        </p>
+                    <?php endif; ?>
                 </div>
                 <!-- /.header-slider__item -->
                 <div class="header-slider__item">
-                    <img src="<?php the_field('header-slider__image-2'); ?>" alt="slide" class="header-slider__image">
-                    <a href="index.php" id="main-logo"><img src="<?php the_field('main-logo'); ?>" alt="Logo: Inspiratie by Stephanie" class="header-slider__logo"></a>
-                    <p class="header-slider__description"><?php the_field('header-slider__description_2'); ?></p>
+                    <?php if (get_field('header-slider__image-2')) : ?>
+                        <img src=" <?php the_field('header-slider__image-2'); ?>" alt="slide" class="header-slider__image">
+                    <?php endif; ?>
+                    <?php if (get_field('main-logo')) : ?>
+                        <a href="index.php" id="main-logo"><img src="<?php the_field('main-logo'); ?>" alt="Logo: Inspiratie by Stephanie" class="header-slider__logo"></a>
+                    <?php endif; ?>
+                    <?php if (get_field('header-slider__description_2')) : ?>
+                        <p class="header-slider__description"><?php the_field('header-slider__description_2'); ?></p>
+                    <?php endif; ?>
                 </div>
                 <!-- /.header-slider__item -->
             </div>
@@ -40,19 +55,14 @@
 
         <nav class="header-navbar navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a href="index.php" class="header-logo"><img src="<?php the_field('small_logo_header'); ?>" alt="Logo: Inspiratie by Stephanie"></a>
+                <a href="index.php" class="header-logo">
+                    <?php if (get_field('small_logo_header')) : ?>
+                        <img src="<?php the_field('small_logo_header'); ?>" alt="Logo: Inspiratie by Stephanie">
+                    <?php endif; ?>
+                </a>
                 <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-menu navbar-nav mb-2 mb-lg-0">
-                        <li class="navbar-menu__item"><a href="index.php" class="navbar-menu__link"><?php the_field('navbar-menu__item-1'); ?></a></li>
-                        <li class="navbar-menu__item"><a href="#scrollTo" class="navbar-menu__link"><?php the_field('navbar-menu__item-2'); ?></a></li>
-                        <li class="navbar-menu__item"><a href="#pricelist" class="navbar-menu__link"><?php the_field('navbar-menu__item-3'); ?></a></li>
-                        <li class="navbar-menu__item"><a href="#photos" class="navbar-menu__link"><?php the_field('navbar-menu__item-4'); ?></a></li>
-                        <li class="navbar-menu__item"><a href="#contact" class="navbar-menu__link"><?php the_field('navbar-menu__item-5'); ?></a></li>
-                    </ul>
-                </div> -->
                 <?php
                 wp_nav_menu(array(
                     'menu' => 'main',
@@ -60,8 +70,6 @@
                     'container_id'    => 'navbarSupportedContent',
                     'menu_class' => 'navbar-menu navbar-nav mb-2 mb-lg-0',
                     'theme_location' => 'top',
-
-
                 ));
                 ?>
             </div>
