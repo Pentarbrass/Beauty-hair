@@ -5,7 +5,6 @@ function beauty_style()
     wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css', array(), wp_get_theme()->get('Version'));
     wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
-    wp_enqueue_style('slick-slider', get_template_directory_uri() . '/css/slick.css');
     wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css');
 }
 

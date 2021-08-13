@@ -57,12 +57,28 @@
         line-height: 1.714
         text-align: center
         &--title
-            // background: url(../img/price-bg.png)
-            // background-repeat: no-repeat
-            // background-position: center
-            padding: 10px 10px
-            font-size: 14px
-            font-family: $font-lato
-            color: $primary
-            line-height: 1.7
             text-align: center
+.title-wrapper
+    background-color: $secondary
+    background-size: contain
+    position: relative
+    z-index: 1
+    padding: 10px 30px
+    font-size: 14px
+    font-family: $font-lato
+    color: $primary
+    line-height: 1.7
+    &::after
+        content: ''
+        width: 0
+        height: 0
+        display: block
+        position: absolute
+        z-index: 10
+        border: 0
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        margin-left: -6px
+        left: 50%
+        border-top: 6px solid $secondary
+        bottom: -6px

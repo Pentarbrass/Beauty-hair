@@ -39,11 +39,11 @@
                 <thead>
                     <tr>
                         <th scope="col" class="hair-length__item--empty"></th>
-                        <th scope="col" class="hair-price__item--title" style="background: url(<?php the_field('column-title-background'); ?>) center no-repeat;"><?php the_field('column-2-title'); ?></th>
-                        <th scope="col" class="hair-price__item--title" style="background: url(<?php the_field('column-title-background'); ?>) center no-repeat;"><?php the_field('column-3-title'); ?></th>
-                        <th scope="col" class="hair-price__item--title" style="background: url(<?php the_field('column-title-background'); ?>) center no-repeat;"><?php the_field('column-4-title'); ?></th>
-                        <th scope="col" class="hair-price__item--title" style="background: url(<?php the_field('column-title-background'); ?>) center no-repeat;"><?php the_field('column-5-title'); ?></th>
-                        <th scope="col" class="hair-price__item--title" style="background: url(<?php the_field('column-title-background'); ?>) center no-repeat;"><?php the_field('column-6-title'); ?></th>
+                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-2-title'); ?></span></th>
+                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-3-title'); ?></span></th>
+                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-4-title'); ?></span></th>
+                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-5-title'); ?></span></th>
+                        <th scope="col" class="hair-price__item--title"><span class="title-wrapper"><?php the_field('column-6-title'); ?></span></th>
                     </tr>
                 </thead>
                 <tbody>

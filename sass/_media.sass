@@ -7,6 +7,22 @@
                     width: 100%
     .contact
         background-size: cover
+        &__link
+            &:hover
+                background-color: $primary
+                color: $secondary
+                &:after
+                    border-left: 22px solid $primary
+    .connection
+        &__button
+            &:hover
+                background: url(../img/btn-w-bg.png)
+                background-repeat: no-repeat
+                background-size: contain
+                color: $secondary
+    .phone-number, .mail-text
+        &:hover
+            color: #f41353
 @media (max-width: 1215px)
     .connection
         &__wrapper
