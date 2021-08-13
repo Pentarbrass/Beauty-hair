@@ -33,6 +33,12 @@ function load_fonts()
     wp_enqueue_style('et-googleFonts');
 }
 
+add_action('after_setup_theme', function () {
+    register_nav_menus(array(
+        'main_menu' => 'Primary menu',
+    ));
+});
+
 add_action('wp_enqueue_scripts', 'beauty_style');
 add_action('wp_enqueue_scripts', 'beauty_scripts');
 add_action('wp_print_styles', 'load_fonts');

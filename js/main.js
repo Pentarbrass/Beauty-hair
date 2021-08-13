@@ -15,15 +15,3 @@ $('.scrollto a').on('click', function() {
 
     return false;
 });
-
-const myCarousel = new Carousel(document.querySelector("#photosCarousel"), {
-
-    slidesPerPage: 1,
-    infinite: true,
-    center: true,
-    fill: true,
-    Dots: false,
-    initialPage: 1,
-    
-    
-});

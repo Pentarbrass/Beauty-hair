@@ -44,7 +44,7 @@
                 <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-menu navbar-nav mb-2 mb-lg-0">
                         <li class="navbar-menu__item"><a href="index.php" class="navbar-menu__link"><?php the_field('navbar-menu__item-1'); ?></a></li>
                         <li class="navbar-menu__item"><a href="#scrollTo" class="navbar-menu__link"><?php the_field('navbar-menu__item-2'); ?></a></li>
@@ -52,7 +52,18 @@
                         <li class="navbar-menu__item"><a href="#photos" class="navbar-menu__link"><?php the_field('navbar-menu__item-4'); ?></a></li>
                         <li class="navbar-menu__item"><a href="#contact" class="navbar-menu__link"><?php the_field('navbar-menu__item-5'); ?></a></li>
                     </ul>
-                </div>
+                </div> -->
+                <?php
+                wp_nav_menu(array(
+                    'menu' => 'main',
+                    'container_class' => 'collapse navbar-collapse',
+                    'container_id'    => 'navbarSupportedContent',
+                    'menu_class' => 'navbar-menu navbar-nav mb-2 mb-lg-0',
+                    'theme_location' => 'top',
+
+
+                ));
+                ?>
             </div>
         </nav>
 

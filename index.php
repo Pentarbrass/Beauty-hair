@@ -34,7 +34,7 @@
         <p class="section-subtitle pricelist__subtitle"><?php the_field('pricelist__subtitle'); ?></p>
         <p class="pricelist__description"><?php the_field('pricelist__description'); ?></p>
         <h3 class="pricelist__table--title"><?php the_field('pricelist__table-title'); ?></h3>
-        <div class="table-responsive-lg">
+        <div class="table-responsive-xl">
             <table class="pricelist__table">
                 <thead>
                     <tr>
@@ -90,37 +90,17 @@
 <!-- /.pricelist -->
 <section class="photos">
     <h2 id="photos" class="section-title photos__title"><?php the_field('photos__title'); ?></h2>
-    <div id="photosCarousel" class="photos__items carousel">
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-1'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-2'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-3'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-4'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-5'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-6'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-7'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-8'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-9'); ?>" alt="Photo: hair style">
-        </div>
-        <div class="carousel__slide">
-            <img class="photo" src="<?php the_field('carousel__slide-10'); ?>" alt="Photo: hair style">
-        </div>
+    <div class="photos__items">
+        <a href="<?php the_field('gallery__slide-1'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-1'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-2'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-2'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-3'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-3'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-4'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-4'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-5'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-5'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-6'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-6'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-7'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-7'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-8'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-8'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-9'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-9'); ?>" alt="Photo: hair style"></a>
+        <a href="<?php the_field('gallery__slide-10'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-10'); ?>" alt="Photo: hair style"></a>
     </div>
     <!-- /.photos__items -->
 </section>
