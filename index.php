@@ -82,84 +82,163 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row" class="hair-length__item"><?php the_field('hair-length-1'); ?></th>
-                        <td class="hair-price__item"><?php the_field('hair-length-1-price-1'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-1-price-2'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-1-price-3'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-1-price-4'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-1-price-5'); ?></td>
+                        <?php if (get_field('hair-length-1')) : ?>
+                            <th scope="row" class="hair-length__item"><?php the_field('hair-length-1'); ?></th>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-1-price-1')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-1-price-1'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-1-price-2')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-1-price-2'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-1-price-3')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-1-price-3'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-1-price-4')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-1-price-4'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-1-price-5')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-1-price-5'); ?></td>
+                        <?php endif; ?>
                     </tr>
                     <tr>
-                        <th scope="row" class="hair-length__item"><?php the_field('hair-length-2'); ?></th>
-                        <td class="hair-price__item"><?php the_field('hair-length-2-price-1'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-2-price-2'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-2-price-3'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-2-price-4'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-2-price-5'); ?></td>
+                        <?php if (get_field('hair-length-2')) : ?>
+                            <th scope="row" class="hair-length__item"><?php the_field('hair-length-2'); ?></th>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-2-price-1')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-2-price-1'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-2-price-2')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-2-price-2'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-2-price-3')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-2-price-3'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-2-price-4')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-2-price-4'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-2-price-5')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-2-price-5'); ?></td>
+                        <?php endif; ?>
                     </tr>
                     <tr>
-                        <th scope="row" class="hair-length__item"><?php the_field('hair-length-3'); ?></th>
-                        <td class="hair-price__item"><?php the_field('hair-length-3-price-1'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-3-price-2'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-3-price-3'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-3-price-4'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-3-price-5'); ?></td>
+                        <?php if (get_field('hair-length-3')) : ?>
+                            <th scope="row" class="hair-length__item"><?php the_field('hair-length-3'); ?></th>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-3-price-1')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-3-price-1'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-3-price-2')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-3-price-2'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-3-price-3')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-3-price-3'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-3-price-4')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-3-price-4'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-3-price-5')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-3-price-5'); ?></td>
+                        <?php endif; ?>
                     </tr>
                     <tr>
-                        <th scope="row" class="hair-length__item"><?php the_field('hair-length-4'); ?></th>
-                        <td class="hair-price__item"><?php the_field('hair-length-4-price-1'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-4-price-2'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-4-price-3'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-4-price-4'); ?></td>
-                        <td class="hair-price__item"><?php the_field('hair-length-4-price-5'); ?></td>
+                        <?php if (get_field('hair-length-4')) : ?>
+                            <th scope="row" class="hair-length__item"><?php the_field('hair-length-4'); ?></th>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-4-price-1')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-4-price-1'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-4-price-2')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-4-price-2'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-4-price-3')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-4-price-3'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-4-price-4')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-4-price-4'); ?></td>
+                        <?php endif; ?>
+                        <?php if (get_field('hair-length-4-price-5')) : ?>
+                            <td class="hair-price__item"><?php the_field('hair-length-4-price-5'); ?></td>
+                        <?php endif; ?>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <p class="pricelist__description pricelist__description--bottom">
-            <?php the_field('service_description'); ?>
-        </p>
+        <?php if (get_field('service_description')) : ?>
+            <p class="pricelist__description pricelist__description--bottom">
+                <?php the_field('service_description'); ?>
+            </p>
+        <?php endif; ?>
     </div>
 </section>
 <!-- /.pricelist -->
 <section class="photos">
-    <h2 id="photos" class="section-title photos__title"><?php the_field('photos__title'); ?></h2>
+    <?php if (get_field('photos__title')) : ?>
+        <h2 id="photos" class="section-title photos__title"><?php the_field('photos__title'); ?></h2>
+    <?php endif; ?>
     <div class="photos__items">
-        <a href="<?php the_field('gallery__slide-1'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-1'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-2'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-2'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-3'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-3'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-4'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-4'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-5'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-5'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-6'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-6'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-7'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-7'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-8'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-8'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-9'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-9'); ?>" alt="Photo: hair style"></a>
-        <a href="<?php the_field('gallery__slide-10'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-10'); ?>" alt="Photo: hair style"></a>
+        <?php if (get_field('gallery__slide-1')) : ?>
+            <a href="<?php the_field('gallery__slide-1'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-1'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-2')) : ?>
+            <a href="<?php the_field('gallery__slide-2'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-2'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-3')) : ?>
+            <a href="<?php the_field('gallery__slide-3'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-3'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-4')) : ?>
+            <a href="<?php the_field('gallery__slide-4'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-4'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-5')) : ?>
+            <a href="<?php the_field('gallery__slide-5'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-5'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-6')) : ?>
+            <a href="<?php the_field('gallery__slide-6'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-6'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-7')) : ?>
+            <a href="<?php the_field('gallery__slide-7'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-7'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-8')) : ?>
+            <a href="<?php the_field('gallery__slide-8'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-8'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-9')) : ?>
+            <a href="<?php the_field('gallery__slide-9'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-9'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
+        <?php if (get_field('gallery__slide-10')) : ?>
+            <a href="<?php the_field('gallery__slide-10'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-10'); ?>" alt="Photo: hair style"></a>
+        <?php endif; ?>
     </div>
     <!-- /.photos__items -->
 </section>
 <!-- /.photos -->
-<section class="connection" style="background: url(<?php the_field('section_background-3'); ?>) no-repeat; background-size: cover">
+<section class="connection" style="background: url(<?php if (get_field('section_background-3')) : ?><?php the_field('section_background-3'); ?><?php endif; ?>) no-repeat; background-size: cover">
     <div class="container">
-        <h2 id="contact" class="section-title connection__title"><?php the_field('connection__title'); ?></h2>
-        <p class="section-subtitle connection__subtitle"><?php the_field('connection__subtitle'); ?></p>
+        <?php if (get_field('connection__title')) : ?>
+            <h2 id="contact" class="section-title connection__title"><?php the_field('connection__title'); ?></h2>
+        <?php endif; ?>
+        <?php if (get_field('connection__subtitle')) : ?>
+            <p class="section-subtitle connection__subtitle"><?php the_field('connection__subtitle'); ?></p>
+        <?php endif; ?>
         <div class="connection__wrapper">
             <div class="form-wrapper">
                 <!-- /.form__wrapper -->
                 <?php echo do_shortcode('[contact-form-7 id="191" html_class="connection__form" title="Contact form STEPHANIE"]'); ?>
-
-                <a href="tel:<?php the_field('phone-number'); ?>" class="connection__phone">
-                    <img src="<?php bloginfo('template_url'); ?>/img/phone.svg" alt="Icon: Phone" class="phone">
-                    <span class="phone-number"><?php the_field('phone-number'); ?></span>
-                </a>
-                <a href="mailto:<?php the_field('email'); ?>" class="connection__mail">
-                    <img src="<?php bloginfo('template_url'); ?>/img/mail.svg" alt="Icon: Mail" class="mail">
-                    <span class="mail-text"><?php the_field('email'); ?></span>
-                </a>
+                <?php if (get_field('phone-number')) : ?>
+                    <a href="tel:<?php the_field('phone-number'); ?>" class="connection__phone">
+                        <img src="<?php bloginfo('template_url'); ?>/img/phone.svg" alt="Icon: Phone" class="phone">
+                        <span class="phone-number"><?php the_field('phone-number'); ?></span>
+                    </a>
+                <?php endif; ?>
+                <?php if (get_field('email')) : ?>
+                    <a href="mailto:<?php the_field('email'); ?>" class="connection__mail">
+                        <img src="<?php bloginfo('template_url'); ?>/img/mail.svg" alt="Icon: Mail" class="mail">
+                        <span class="mail-text"><?php the_field('email'); ?></span>
+                    </a>
+                <?php endif; ?>
             </div>
             <div class="map">
-                <?php the_field('gmap'); ?>
-                <p class="location"><?php the_field('location_address'); ?></p>
+                <?php if (get_field('gmap')) : ?><?php the_field('gmap'); ?><?php endif; ?>
+                <?php if (get_field('location_address')) : ?><p class="location"><?php the_field('location_address'); ?></p><?php endif; ?>
             </div>
 
             <!-- /.map -->
