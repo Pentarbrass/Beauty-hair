@@ -1,5 +1,9 @@
-$(document).ready(function(){
-    $('.header-slider__wrapper').slick();
+$(window).on('load', function(){
+    $('.header-slider__wrapper').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+    });
+    
 });
 
 $('.scrollto a').on('click', function() {

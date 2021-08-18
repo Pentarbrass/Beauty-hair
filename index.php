@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="description" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat; background-size: cover">
+<section class="description" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
     <div class=" container">
         <?php if (get_field('main-title')) : ?>
             <h1 id="scrollTo" class="section-title"><?php the_field('main-title'); ?></h1>
@@ -44,7 +44,7 @@
 </section>
 <!-- /.contact -->
 
-<section class="pricelist" style="background: url(<?php if (get_field('section_background-2')) : ?><?php the_field('section_background-2'); ?><?php endif; ?>) no-repeat; background-size: cover">
+<section class="pricelist" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
     <div class="container">
         <?php if (get_field('pricelist__title')) : ?>
             <h2 id="pricelist" class="section-title pricelist__title"><?php the_field('pricelist__title'); ?></h2>
@@ -211,7 +211,7 @@
     <!-- /.photos__items -->
 </section>
 <!-- /.photos -->
-<section class="connection" style="background: url(<?php if (get_field('section_background-3')) : ?><?php the_field('section_background-3'); ?><?php endif; ?>) no-repeat; background-size: cover">
+<section class="connection" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
     <div class="container">
         <?php if (get_field('connection__title')) : ?>
             <h2 id="contact" class="section-title connection__title"><?php the_field('connection__title'); ?></h2>

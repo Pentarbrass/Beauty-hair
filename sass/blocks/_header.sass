@@ -135,3 +135,12 @@
 #main-logo
     width: 470px
     height: 215px
+/*Пока слайдер не инициализировался*/
+.slider:not(.slick-initialized)
+    display: flex
+    max-width: 100%
+    overflow: auto
+
+.slide:not(.slick-slide)
+    width: 50%
+    flex: 0 0 auto
