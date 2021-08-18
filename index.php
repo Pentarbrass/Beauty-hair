@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<section class="description" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
+<section class="description" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, 
+url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
     <div class=" container">
         <?php if (get_field('main-title')) : ?>
             <h1 id="scrollTo" class="section-title"><?php the_field('main-title'); ?></h1>
@@ -44,7 +45,8 @@
 </section>
 <!-- /.contact -->
 
-<section class="pricelist" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
+<section class="pricelist" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, 
+url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
     <div class="container">
         <?php if (get_field('pricelist__title')) : ?>
             <h2 id="pricelist" class="section-title pricelist__title"><?php the_field('pricelist__title'); ?></h2>
@@ -176,42 +178,22 @@
     <?php if (get_field('photos__title')) : ?>
         <h2 id="photos" class="section-title photos__title"><?php the_field('photos__title'); ?></h2>
     <?php endif; ?>
-    <div class="photos__items">
-        <?php if (get_field('gallery__slide-1')) : ?>
-            <a href="<?php the_field('gallery__slide-1'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-1'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-2')) : ?>
-            <a href="<?php the_field('gallery__slide-2'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-2'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-3')) : ?>
-            <a href="<?php the_field('gallery__slide-3'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-3'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-4')) : ?>
-            <a href="<?php the_field('gallery__slide-4'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-4'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-5')) : ?>
-            <a href="<?php the_field('gallery__slide-5'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-5'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-6')) : ?>
-            <a href="<?php the_field('gallery__slide-6'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-6'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-7')) : ?>
-            <a href="<?php the_field('gallery__slide-7'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-7'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-8')) : ?>
-            <a href="<?php the_field('gallery__slide-8'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-8'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-9')) : ?>
-            <a href="<?php the_field('gallery__slide-9'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-9'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-        <?php if (get_field('gallery__slide-10')) : ?>
-            <a href="<?php the_field('gallery__slide-10'); ?>" data-fancybox="gallery"><img class=" photo" src="<?php the_field('gallery__slide-10'); ?>" alt="Photo: hair style"></a>
-        <?php endif; ?>
-    </div>
+
+    <?php
+    $images = get_field('photos-gallery');
+    if ($images) : ?>
+        <div class="photos__items">
+            <?php foreach ($images as $image) : ?>
+                <a href="<?php echo $image; ?>" data-fancybox="gallery">
+                    <img class=" photo" src="<?php echo $image; ?>" alt="Photo: hair style"></a>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
     <!-- /.photos__items -->
 </section>
 <!-- /.photos -->
-<section class="connection" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
+<section class="connection" style="background: url(<?php if (get_field('section_background')) : ?><?php the_field('section_background'); ?><?php endif; ?>) no-repeat, 
+url(<?php if (get_field('section_overlay')) : ?><?php the_field('section_overlay'); ?><?php endif; ?>) no-repeat; background-size: cover;  background-blend-mode: overlay;">
     <div class="container">
         <?php if (get_field('connection__title')) : ?>
             <h2 id="contact" class="section-title connection__title"><?php the_field('connection__title'); ?></h2>

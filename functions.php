@@ -33,6 +33,16 @@ function load_fonts()
     wp_enqueue_style('et-googleFonts');
 }
 
+if (
+    function_exists('acf_add_options_page')
+) {
+    acf_add_options_page();
+    acf_add_options_sub_page(array(
+        'page_title'     => 'Theme Settings',
+        'menu_title'    => 'Footer',
+    ));
+}
+
 add_action('after_setup_theme', function () {
     register_nav_menus(array(
         'main_menu' => 'Primary menu',

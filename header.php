@@ -17,38 +17,28 @@
     <header class="header" id="hero">
         <div class="header-slider">
             <div class="header-slider__wrapper">
-                <div class="header-slider__item">
-                    <?php if (get_field('header-slider__image')) : ?>
-                        <img src="<?php the_field('header-slider__image'); ?>" alt="slide" class="header-slider__image">
-                    <?php endif; ?>
-                    <div class="header-slider__contant">
-                        <?php if (get_field('main-logo')) : ?>
-                            <a href="index.php" id="main-logo">
-                                <img src="<?php the_field('main-logo'); ?>" alt="Logo: Inspiratie by Stephanie" class="header-slider__logo">
-                            </a>
-                        <?php endif; ?>
-                        <?php if (get_field('header-slider__description')) : ?>
-                            <p class="header-slider__description">
-                                <?php the_field('header-slider__description'); ?>
-                            </p>
-                        <?php endif; ?>
+
+                <?php while (have_rows('main-slider')) : the_row(); ?>
+                    <div class="header-slider__item">
+                        <?php
+                        $image = get_sub_field('slide__image');
+                        ?>
+                        <img src="<?php echo $image; ?>" alt="slide" class="header-slider__image">
+                        <div class="header-slider__contant">
+                            <?php if (get_field('main-logo')) : ?>
+                                <a href="index.php" id="main-logo">
+                                    <img src="<?php the_field('main-logo'); ?>" alt="Logo: Inspiratie by Stephanie" class="header-slider__logo">
+                                </a>
+                            <?php endif; ?>
+                            <?php if (get_sub_field('slider__description')) : ?>
+                                <p class="header-slider__description">
+                                    <?php the_sub_field('slider__description'); ?>
+                                </p>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                </div>
-                <!-- /.header-slider__item -->
-                <div class="header-slider__item">
-                    <?php if (get_field('header-slider__image-2')) : ?>
-                        <img src=" <?php the_field('header-slider__image-2'); ?>" alt="slide" class="header-slider__image">
-                    <?php endif; ?>
-                    <div class="header-slider__contant header-slider__contant--fix">
-                        <?php if (get_field('main-logo')) : ?>
-                            <a href="index.php" id="main-logo"><img src="<?php the_field('main-logo'); ?>" alt="Logo: Inspiratie by Stephanie" class="header-slider__logo"></a>
-                        <?php endif; ?>
-                        <?php if (get_field('header-slider__description_2')) : ?>
-                            <p class="header-slider__description header-slider__description--fix"><?php the_field('header-slider__description_2'); ?></p>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <!-- /.header-slider__item -->
+                <?php endwhile; ?>
+
             </div>
             <!-- /.header-slider__wrapper -->
             <a href="#scrollTo" class="header__button scrollto">
