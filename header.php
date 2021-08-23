@@ -14,6 +14,15 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__first"></div>
+            <div class="preloader__second"></div>
+            <div class="preloader__third"></div>
+        </div>
+
+    </div>
+    <!-- /.preloader -->
     <header class="header" id="hero">
         <div class="header-slider">
             <div class="header-slider__wrapper">

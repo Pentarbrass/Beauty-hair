@@ -3,7 +3,20 @@ $(window).on('load', function(){
         autoplay: true,
         autoplaySpeed: 4000,
     });
-    
+    function preloader() {
+    $(() => {
+        let p = $('.preloader');
+
+        p.css('opacity', 0);
+
+        setInterval(
+            () => p.remove(),
+            parseInt(p.css('1s')) * 1000
+        )
+    });
+}
+
+preloader();
 });
 
 $('.scrollto a').on('click', function() {

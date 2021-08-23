@@ -132,3 +132,50 @@
     width: 470px
     height: 215px
     margin-bottom: 259px
+
+// Preloader settings
+.preloader
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: #3a3a3a
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 100
+    transition: 1s
+    &__content
+        position: relative
+        width: 200px
+        height: 200px
+    &__first, &__second, &__third
+        position: absolute
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        animation: 1s linear infinite
+    &__first
+        border-bottom: 3px solid $primary
+        animation-name: first
+    &__second
+        border-right: 3px solid $secondary
+        animation-name: second
+    &__third
+        border-top: 3px solid #000000
+        animation-name: third
+
+@keyframes first
+    0%
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+    100%
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+@keyframes second
+    0%
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+    100%
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+@keyframes third
+    0%
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+    100%
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
